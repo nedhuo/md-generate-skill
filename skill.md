@@ -153,6 +153,24 @@ Do not pad content to appear thorough. Do not compress content to appear concise
 
 ---
 
+### 1.10 Output Mode: File vs Inline
+
+When generating a Markdown document, default to writing a file rather than printing content inline in the conversation.
+
+**Default behavior (write to file):**
+- Triggered by: "整理", "生成", "写一份", "创建", "记录", "整理笔记", "generate", "create", "write", or any request to produce a document
+- Action: Write the content to a `.md` file with a descriptive filename, then confirm the file path to the user
+- Filename convention: use kebab-case derived from the document title or topic (e.g., `kotlin-coroutines-basics.md`, `react-hooks-note.md`)
+- Default save location: current working directory, unless the user specifies otherwise
+
+**Inline output (print in conversation):**
+- Triggered by: "输出", "展示", "显示", "告诉我", "show me", "print", "display", or phrasing that implies reading in-place
+- Also triggered when: the content is very short (under ~30 lines), or the user is asking for a quick reference rather than a saved document
+
+**When in doubt:** write the file and show the first few lines as a preview, then ask if the user wants to see the full content inline.
+
+---
+
 ## Part 2: Scene-Specific Rules
 
 Detect the document type from context (user request, title, content) and apply the matching template.
