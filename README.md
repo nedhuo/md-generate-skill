@@ -23,13 +23,13 @@ Add to your project's `.kiro/skills/` directory, or load remotely:
 
 ```yaml
 # .kiro/skills/md-generate.md (remote reference)
-url: https://raw.githubusercontent.com/YOUR_USERNAME/md-generate-skill/main/skill.md
+url: https://raw.githubusercontent.com/nedhuo/md-generate-skill/main/skill.md
 ```
 
 Or reference directly in a prompt:
 
 ```
-Load skill from: https://raw.githubusercontent.com/YOUR_USERNAME/md-generate-skill/main/skill.md
+Load skill from: https://raw.githubusercontent.com/nedhuo/md-generate-skill/main/skill.md
 
 Now generate a technical note about React Server Components.
 ```
