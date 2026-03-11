@@ -122,6 +122,37 @@ Start sections directly with content. End when the content is complete.
 
 ---
 
+### 1.8 Link Preservation (when summarizing external content)
+
+When the source is a URL (article, blog post, documentation, social media post), you MUST preserve links.
+
+MUST:
+- Include the original source URL at the top of the document (under the title)
+- Preserve all links to tools, GitHub repos, official docs, or projects mentioned in the source
+- Place preserved links in a "References" section at the end, or inline where first mentioned
+
+MUST NOT:
+- Preserve navigation links, login pages, JavaScript void links, or social sharing buttons
+- Invent or guess URLs — only include links explicitly present in the source
+
+Decision rule: if a link points to something a reader might want to visit to learn more or take action, keep it. If it's UI chrome, discard it.
+
+---
+
+### 1.9 Content Density
+
+Write at the density the content demands. The rule is: give the reader exactly what they need to continue — no more, no less.
+
+- **Operational steps** (commands, configs, setup) → write completely. Include exact commands, parameters, and warnings. A missing detail here blocks the reader.
+- **Background / context** → keep short. Readers need the conclusion, not the reasoning chain. One paragraph is usually enough.
+- **Simple facts** → one sentence. Do not explain what needs no explanation.
+- **High-stakes warnings** (data loss, irreversible actions, common mistakes) → bold the consequence, explain why it matters. These deserve more space because the cost of missing them is high.
+- **Concepts with non-obvious mechanics** → explain the mechanism, not just the outcome. Readers who understand why make fewer mistakes.
+
+Do not pad content to appear thorough. Do not compress content to appear concise. Let the reader's need determine the length.
+
+---
+
 ## Part 2: Scene-Specific Rules
 
 Detect the document type from context (user request, title, content) and apply the matching template.
